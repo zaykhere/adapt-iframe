@@ -1,0 +1,71 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "properties": {
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "title": "Diseño compatible",
+      "default": "both",
+      "editorOnly": true
+    },
+    "_setCompletionOn": {
+      "type": "string",
+      "default": "inview",
+      "title": "Establecer finalización en",
+      "inputType": {
+        "type": "Select",
+        "options": [
+          "inview",
+          "message"
+        ]
+      },
+      "help": "Establezca la finalización en función de haberse desplazado a la vista o desde el contenido incrustado enviando un mensaje a través de la API window.postMessage"
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "title": "Instrucción",
+      "inputType": "Text",
+      "validators": [],
+      "help": "Este es el texto de instrucciones."
+    },
+    "_src": {
+      "type": "string",
+      "required": true,
+      "title": "URL",
+      "default": "",
+      "inputType": "Text",
+      "validators": ["required"],
+      "help": "Ruta a la página que desea mostrar en el iframe"
+    },
+    "_initialWidth": {
+      "type": "number",
+      "required": true,
+      "title": "Ancho inicial",
+      "default": "",
+      "inputType": "Number",
+      "validators": ["number", "required"]
+    },
+    "_initialHeight": {
+      "type": "number",
+      "required": true,
+      "title": "Altura inicial",
+      "default": "",
+      "inputType": "Number",
+      "validators": ["number", "required"]
+    },
+    "_dimensionDelegateSelector": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "title": "Selector de delegado de dimensión",
+      "inputType": "Text",
+      "help": "Si las dimensiones del iframe se deben delegar a un elemento secundario del iframe, use este atributo para seleccionar qué elemento secundario es este."
+    }
+  }
+}

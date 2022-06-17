@@ -10,7 +10,7 @@
     "issues": "https://github.com/cgkineo/adapt-iframe/issues/",
     "displayName": "iframe",
     "component": "iframe",
-    "description": "An adapt component that loads content into an iframe",
+    "description": "Un componente de adaptación que carga contenido en un iframe",
     "main": "/js/adapt-iframe.js",
     "keywords": [
         "adapt-plugin",
